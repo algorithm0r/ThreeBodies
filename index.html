@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Three Bodies</title>
+    <script type="text/javascript" src="./assetmanager.js"></script>
+    <script type="text/javascript" src="./gameengine.js"></script>
+    <script type="text/javascript" src="./timer.js"></script>
+    <script type="text/javascript" src="./util.js"></script>
+    <script type="text/javascript" src="./circle.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+</head>
+<body>
+    <canvas id="gameWorld" width="800" height="800" style="border: 1px solid white; background: black"></canvas>
+    <div>
+        <input type="range" id="zoom"
+               min="0.05" max="1" value="1" step="0.05">
+        <label for="zoom">Zoom</label>
+    </div>
+    <div>
+        <input type="checkbox" id="visual" checked>
+        <label for="visual">Show Path</label>
+        <input type="checkbox" id="anchor" checked>
+        <label for="anchor">Anchor Earth</label>
+        <input type="checkbox" id="realtime">
+        <label for="realtime">Real Time</label>
+        <br />
+        <input type="range" id="speed" 
+               min="100" max="250" value="150" step="10">
+        <label for="speed">Initial Speed</label>
+    </div>
+    <div>
+        Number of Moons<br />
+        <input type="radio" id="one" name="num" value="1" />
+        <label for="one">One</label>
+        <input type="radio" id="twoa" name="num" value="2" />
+        <label for="twoa">Two (90 degrees)</label>
+        <input type="radio" id="twob" name="num" value="0" />
+        <label for="twob">Two (180 degrees)</label>
+        <input type="radio" id="three" name="num" value="3" />
+        <label for="three">Three</label>
+        <input type="radio" id="four" name="num" value="4" checked />
+        <label for="four">Four</label>
+    </div>
+    <div>
+        <button id="restart" onclick="restart()">Restart</button>
+    </div>
+</body>
+</html>
